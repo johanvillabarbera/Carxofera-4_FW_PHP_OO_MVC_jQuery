@@ -1,0 +1,66 @@
+<div class="container-login">
+  <h2 class="login-title">Login</h2>
+  <form class="login-form">
+    <div>
+      <label for="username_log">Usuario</label>
+      <input id="username_log" type="text" placeholder="Eren Buruk" name="username_log" required/>
+    </div>
+    <div>
+      <label for="password_log">Contraseña</label>
+      <input id="password_log" type="password" placeholder="password" name="password_log" required/>
+    </div>
+    <button class="btn-signin btn--form" type="submit" value="Log in">Log in</button>
+    <button class="btn-register btn--form" type="submit" value="Register">You don't have an account?</button>
+    <button class="btn-recover btn--form" type="submit" value="Recover">Forgot password?</button>
+  </form>
+</div>
+
+<div class="container-register" style="display: none">
+  <h2 class="register-title">Register</h2>
+  <form class="register-form">
+    <div>
+      <label for="username_reg">Usuario</label>
+      <input id="username_reg" type="text" placeholder="Eren Buruk" name="username_reg" required/>
+    </div>
+    <div>
+      <label for="password_reg1">Contraseña</label>
+      <input id="password_reg1" type="password" placeholder="password" name="password_reg1" required/>
+    </div>
+    <div>
+      <label for="password_reg2">Repetir contraseña</label>
+      <input id="password_reg2" type="password" placeholder="password" name="password_reg2" required/>
+    </div>
+    <div>
+      <label for="email_reg">Email </label>
+      <input id="email_reg" type="email" placeholder="me@example.com" name="email_reg" required/>
+    </div>
+    <button class="btn-signup btn--form" type="submit" value="Register">Sign up</button>
+    <button class="btn-login btn--form" type="submit" value="Log in">Already member?</button>
+  </form>
+</div>
+
+<div class="container-send-recover" style="display: none">
+  <h2 class="send-recover-title">Recuperación de contraseña</h2>
+  <form class="send-recover-form">
+    <div>
+      <label for="email_recover">Correo electrónico</label>
+      <input id="email_recover" type="text" placeholder="me@example.com" name="email_recover" required/>
+    </div>
+    <button class="btn-send-recover btn--form" type="submit" value="Send">Enviar</button>
+  </form>
+</div>
+
+<div class="container-new-password" style="display: none">
+  <h2 class="new-password-title">Escribir nueva contraseña</h2>
+  <form class="new-password-form">
+    <div>
+      <label for="password_new1">Contraseña</label>
+      <input id="password_new1" type="password" placeholder="password" name="password_new1" required/>
+    </div>
+    <div>
+      <label for="password_new2">Repetir contraseña</label>
+      <input id="password_new2" type="password" placeholder="password" name="password_new2" required/>
+    </div>
+    <button class="btn-new-password btn--form" type="submit" value="Confirm">Confirmar</button>
+  </form>
+</div>

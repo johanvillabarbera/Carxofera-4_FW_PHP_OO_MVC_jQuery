@@ -1,0 +1,111 @@
+<h2 class="display-4 text-uppercase text-center mb-5">Lista de coches</h2>
+
+<!-- Filtros aplicados -->
+<div class="highlight"></div>
+<!-- Filtros aplicados-->
+
+<div class="container-fluid bg-white pt-3 px-lg-5 d-flex justify-content-center container_sort_by">
+    <div class="row mx-n2 justify-content-center">
+        <div class="col-xl-12 col-lg-12 col-md-12 px-2">
+            <select class="custom-select px-4 mb-3" style="height: 50px;" id="select_sort_by">
+                <option selected disabled>Ordenar</option>
+                <option value="km.desc">por más km</option>
+                <option value="km.asc">por menos km</option>
+                <option value="price.desc">por más precio</option>
+                <option value="price.asc">por menos precio</option>
+                <option value="count_visited.desc">por más visitados</option>
+                <option value="count_visited.asc">por menos visitados</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<!-- Ventana de filtros anteriores -->
+<div class="previous_filter_modal"></div>
+<!-- Ventana de filtros anteriores -->
+
+<!-- Listado de coches -->
+<div class="container-fluid position-relative" id="listado_coches">
+    <div class="row">
+        <div class="col-lg-3 text-center text-lg-left mb-2 mb-lg-0"> 
+            <div class="bg-secondary p-5">
+                <h3 class="text-primary text-center mb-4 ">Filtros</h3>
+                <div class="form-group">
+                    <select class="custom-select px-4 filter_brand" style="height: 50px;">
+                        <option selected disabled>Marca</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="custom-select px-4 filter_motor_type" style="height: 50px;">
+                        <option selected disabled>Tipo de motor</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="custom-select px-4 filter_category" style="height: 50px;">
+                        <option selected disabled>Categoria</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="custom-select px-4 filter_color" style="height: 50px;">
+                        <option selected disabled>Color</option>
+                    </select>
+                </div>
+                <div class="form-group mb-0">
+                    <button class="btn btn-primary btn-block filter_button" type="submit" style="height: 50px;" id="Button_filter">Filtrar</button>
+                    <button class="btn btn-primary btn-block filter_remove" type="submit" style="height: 50px;" id="Remove_filter">Eliminar</button>
+                    <button class="btn btn-primary btn-block previous_filter" type="submit" style="height: 50px;display: none;" id="Previous_filter">Filtros previos</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="container-fluid py-5">
+                <div class="container pt-5 pb-3">
+                    <div class="row" id="content_shop_cars"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Listado de coches -->
+
+<!-- Paginació -->
+<div class="container-fluid bg-white pt-3 px-lg-5 d-flex justify-content-center">
+    <div class="row mx-n2 justify-content-center">
+        <div class="col-xl-12 col-lg-12 col-md-12 px-2">
+            <div id="pagination"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Detalles del coche -->
+<div class="container_details">
+    <div class="imgBx">
+        <div class="glider-contain">
+        <div class="carousel_imgs"></div>
+        
+        <button aria-label="Previous" class="glider-prev">«</button>
+        <button aria-label="Next" class="glider-next">»</button>
+        <div role="tablist" class="dots"></div>
+        </div>
+    </div>
+    <div class="details"></div>
+</div>
+<!-- Detalles del coche -->
+
+<br><br>
+
+<!-- Mapa -->
+<div id='map' style='width: 900px; height: 300px; margin: 0 auto;'></div>
+<!-- Mapa -->
+
+<br><br><br>
+
+<!-- Coches relacionados -->
+<div class="container_related_cars">
+    <h2 class="title related_cars_title">Coches relacionados</h2>
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="row" id="related_cars"></div>
+        </div>
+    </div>
+</div>

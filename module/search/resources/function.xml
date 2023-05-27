@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+    <function>
+        <name>car_type</name>
+        <uri>car_type</uri>
+    </function>
+    <function>
+        <name>car_brand</name>
+        <uri>car_brand</uri>
+    </function>
+    <function>
+        <name>autocomplete</name>
+        <uri>autocomplete</uri>
+    </function>
+    <function>
+        <name>select_model</name>
+        <uri>select_model</uri>
+    </function>
+    <function>
+        <name>select_model_brand</name>
+        <uri>select_model_brand</uri>
+    </function>
+    <function>
+        <name>select_brand</name>
+        <uri>select_brand</uri>
+    </function>
+</functions>
