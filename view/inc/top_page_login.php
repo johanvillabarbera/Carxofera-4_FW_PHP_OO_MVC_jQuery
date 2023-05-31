@@ -30,7 +30,14 @@
 		<link href="<?php echo SITE_PATH ?>view/css/style.css" rel="stylesheet">
 		<!-- <link rel="stylesheet" type="text/css" href="view/css/slick/slick.css"/> -->
 
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+
 		<!-- JS -->
+		<script src="<?php echo SITE_PATH ?>module/login/view/js/firebase_credentials.js"></script>
 	    <script src="<?php echo SITE_PATH ?>module/login/view/js/controller_login.js"></script>
 		<script src="<?php echo SITE_PATH ?>module/cart/view/js/controller_cart.js"></script>
 		<script type="text/javascript" src="<?php echo SITE_PATH ?>view/js/utils.js"></script>

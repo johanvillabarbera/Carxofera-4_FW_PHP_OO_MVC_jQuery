@@ -41,7 +41,7 @@
 		}
 
 		public function get_select_auto_BLL($args) {
-			return $this -> dao -> select_auto($this->db, $args[0]);
+			return $this -> dao -> select_auto($this->db, $args);
 		}
 
 		// public function get_car_type_BLL() {

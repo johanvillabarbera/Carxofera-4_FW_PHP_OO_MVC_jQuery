@@ -33,7 +33,7 @@ function clicks_cart(){
         localStorage.removeItem('filter');
         var id_car = this.getAttribute('id');
         localStorage.setItem('details_visits', id_car); 
-        window.location.href = 'index.php?page=controller_shop&op=list';  
+        window.location.href = '?module=shop';  
     });
 
     $(document).on('click','.button_remove_cart',function () {

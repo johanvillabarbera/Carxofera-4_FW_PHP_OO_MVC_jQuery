@@ -71,16 +71,21 @@
 		}
 
 		public function get_social_login_BLL($args) {
-
-			if (!empty($this -> dao -> select_user($this->db, $args[1], $args[2]))) {
-				$user = $this -> dao -> select_user($this->db, $args[1], $args[2]);
-				$jwt = jwt_process::encode($user[0]['username']);
-				return json_encode($jwt);
+			if (!empty($this -> dao -> select_user_social($this->db, $args[1], $args[2]))) {
+				$user = $this -> dao -> select_user_social($this->db, $args[1], $args[2]);
+				$token[0]= middleware::create_token($user[0]['username']);
+				$token[1]= middleware::create_token_refresh($user[0]['username']);
+				$_SESSION['username'] = $user[0]['username']; //Guardamos el usuario 
+				$_SESSION['tiempo'] = time(); //Guardamos el tiempo que se logea
+				return $token;
             } else {
 				$this -> dao -> insert_social_login($this->db, $args[0], $args[1], $args[2], $args[3]);
-				$user = $this -> dao -> select_user($this->db, $args[1], $args[2]);
-				$jwt = jwt_process::encode($user[0]['username']);
-				return json_encode($jwt);
+				$user = $this -> dao -> select_user_social($this->db, $args[1], $args[2]);
+				$token[0]= middleware::create_token($user[0]['username']);
+				$token[1]= middleware::create_token_refresh($user[0]['username']);
+				$_SESSION['username'] = $user[0]['username']; //Guardamos el usuario 
+				$_SESSION['tiempo'] = time(); //Guardamos el tiempo que se logea
+				return $token;
 			}
 		}
 

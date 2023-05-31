@@ -29,10 +29,9 @@
             echo json_encode(common::load_model('login_model', 'get_register', [$_POST['username_reg'], $_POST['email_reg'], $_POST['password_reg1']]));
         }
 
-        // function social_login() {
-        //     // echo json_encode($_POST['id']);
-        //     echo json_encode(common::load_model('login_model', 'get_social_login', [$_POST['id'], $_POST['username'], $_POST['email'], $_POST['avatar']]));
-        // } 
+        function social_login() {
+            echo json_encode(common::load_model('login_model', 'get_social_login', [$_POST['id'], $_POST['username'], $_POST['email'], $_POST['avatar']]));
+        } 
     
         function verify_email() {
             $verify = json_encode(common::load_model('login_model', 'get_verify_email', $_POST['token_email']));

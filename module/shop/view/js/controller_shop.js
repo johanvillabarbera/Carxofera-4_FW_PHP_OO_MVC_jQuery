@@ -7,10 +7,10 @@ function ajaxForSearch(url, filter, total_prod = 0, items_page) {
             $('.related_cars_title').css({ 'display' : 'none'});
 
             //Mejora para que cuando no hayan resultados en los filtros aplicados
-            if (data == "error") {
+            if (data == "error" || data.length == 0) {
                 $('<div></div>').appendTo('#content_shop_cars')
                     .html(
-                        '<h3>¡No se encuentarn resultados con los filtros aplicados!</h3>'
+                        '<h3>¡No se encuentran resultados con los filtros aplicados!</h3>'
                     )
             } else {
                 for (row in data) {
@@ -77,9 +77,14 @@ function shopAll(total_prod = 0, items_page = 3) {
     }else if (filter) {
         ajaxForSearch("?module=shop&op=filters", filter, total_prod, items_page);
     }else if (redirect_like) {
-        redirect_login_like();
+        var redirect = localStorage.getItem('redirect_like').split(",");
+        localStorage.removeItem('redirect_like');
+        details(redirect[0]);
+        setTimeout(click_like(redirect[0], redirect[1]), 1000);
+        // location.reload();
     }else if (details_visits) {
         localStorage.removeItem('details_visits');
+        // location.reload();
         details(details_visits);
     } else {
         ajaxForSearch("?module=shop&op=list", undefined, total_prod, items_page);
@@ -94,7 +99,7 @@ function clicks_shop() {
 
     $(document).on("click", ".details__heart", function() {
         var id_car = this.getAttribute('id');
-        click_like(id_car, "details_car");
+        click_like(id_car, "all_cars");
     });
 }
 
@@ -635,6 +640,7 @@ function redirect_login_like() {
         details(redirect[0]);
     } else if (redirect[1] == "all_cars") {
         localStorage.removeItem('redirect_like');
+        click_like(redirect[0], redirect[1]);
         shopAll();
     }
 }//end_redirect_login_like

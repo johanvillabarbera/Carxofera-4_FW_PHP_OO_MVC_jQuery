@@ -46,26 +46,6 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0 ">
-                        <!-- <a href="index.php?page=controller_home&op=list" class="nav-item nav-link active">Home</a> -->
-                        <!-- <a href="index.php?page=controller_shop&op=list" class="nav-item nav-link">Shop</a> -->
-                        <!-- <a href="index.php?page=aboutus" class="nav-item nav-link">About</a> -->
-                        <!-- <a href="index.php?page=services" class="nav-item nav-link">Services</a> -->
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cars</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <!-- <a href="index.php?page=controller_car&op=list" class="dropdown-item">Car Listing</a> -->
-                                <a href="detail.html" class="dropdown-item">Car Detail</a>
-                                <a href="booking.html" class="dropdown-item">Car Booking</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="team.html" class="dropdown-item">The Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            </div>
-                        </div>
-                        <!-- <a href="index.php?page=controller_login&op=list" class="nav-item nav-link login-icon">Login</a> -->
                         <div class="cart nav-item nav-link"></div>
                     </div>
                 </div>
