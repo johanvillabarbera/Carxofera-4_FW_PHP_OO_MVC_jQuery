@@ -79,13 +79,8 @@ function shopAll(total_prod = 0, items_page = 3) {
     }else if (redirect_like) {
         var redirect = localStorage.getItem('redirect_like').split(",");
         localStorage.removeItem('redirect_like');
+        click_like(redirect[0], 'redirect');
         details(redirect[0]);
-        setTimeout(click_like(redirect[0], redirect[1]), 1000);
-        // location.reload();
-    }else if (details_visits) {
-        localStorage.removeItem('details_visits');
-        // location.reload();
-        details(details_visits);
     } else {
         ajaxForSearch("?module=shop&op=list", undefined, total_prod, items_page);
     }
@@ -603,7 +598,7 @@ function click_like(id_car, lugar) {
     if (token) {
         ajaxPromise(friendlyURL("?module=shop&op=control_likes"), 'POST', 'JSON', {'id_car': id_car, 'token': token})
         .then(function(data) {
-                $("#" + id_car + ".fa-heart").toggleClass('fa-solid');
+            lugar == 'redirect' ? undefined : $("#" + id_car + ".fa-heart").toggleClass('fa-solid');
             }).catch(function() {
                 console.log('Fail likes');
             });

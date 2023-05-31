@@ -126,7 +126,7 @@ function loadCarouselVisits(){
                 localStorage.removeItem('filter');
                 var id_car = this.getAttribute('id');
                 localStorage.setItem('details_visits', id_car); 
-                window.location.href = 'index.php?page=controller_shop&op=list';
+                window.location.href = '?module=shop';
             });
         })
         .catch(function() {

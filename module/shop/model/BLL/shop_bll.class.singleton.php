@@ -33,7 +33,12 @@
 		}
 
 		public function get_cars_related_BLL($args) {
-			return $this -> dao -> select_cars_related($this->db, $args[0], $args[1], $args[2], $args[3]);
+			if($this -> dao -> select_cars_related($this->db, $args[0], $args[1], $args[2], $args[3])){
+				return $this -> dao -> select_cars_related($this->db, $args[0], $args[1], $args[2], $args[3]);
+			}else{
+				return 'error';
+			}
+			
 		}
 
 		public function get_count_cars_related_BLL($args) {
