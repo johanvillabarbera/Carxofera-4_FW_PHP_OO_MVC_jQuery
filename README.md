@@ -2,7 +2,7 @@
 
 _¿De qué trata Carxofera?_ 
 
-Carxofera es una página web de compra y venta de vehículos de segunda mano, donde el usuario tendrá
+Carxofera es una aplicación web de compra y venta de vehículos de segunda mano, donde el usuario tendrá
 la opción de poder navegar por los distintos vehículos existentes e incluso registrarse para poder comprar.
 
 ## Contenido 📖
