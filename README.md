@@ -65,7 +65,9 @@ La web se compone de los siguientes módulos:
 
   El módulo que sirve para poder identificarte con un usuario. Incluye lo siguiente:
   * Opción de iniciar sesión con un nombre de usuario y una contraseña.
-  * Opción de registrarse con un nombre de usuario, un correo electrónico y una contraseña. El nombre y el correo no se pueden repetir, y todos los campos deben de cumplir unos requisitos, como la longitud o algunos carácteres especiales.
+  * Opción de registrarse con un nombre de usuario, un correo electrónico y una contraseña. El nombre y el correo no se pueden repetir, y todos los campos deben de cumplir unos requisitos, como la longitud o algunos carácteres especiales. Requiere una verificación que se envía al correo electrónico para poder iniciar sesión.
+  * Opción de iniciar sesión con cuentas de Google y GitHub.
+  * Opción de recuperar la contraseña mediante correo electrónico.
   * Una vez se ha iniciado sesión, se muestra el nombre del usuario con su avatar y la opción de cerrar sesión.
   * Existen algunas funciones como dar Me gusta o añadir al carrito, las cuales requieren un inicio de sesión.
 
